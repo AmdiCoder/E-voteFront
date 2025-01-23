@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
-import {RouterLink, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [
-    RouterOutlet,
-    RouterLink
-  ],
+  standalone: true,  // Si tu veux utiliser un composant standalone
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-
+export class HomeComponent {  // Assure-toi que la classe est nommée 'HomeComponent'
+  title = 'eVote';
 }
+
