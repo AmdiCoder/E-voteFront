@@ -1,0 +1,29 @@
+/* accueil.component.css */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.col-md-4 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #23527c;
+}
