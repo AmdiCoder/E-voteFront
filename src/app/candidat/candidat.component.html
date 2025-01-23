@@ -1,0 +1,33 @@
+<p>  <span ><a routerLink="/createCandidat">Inscrire un candidat</a></span>
+</p>
+<h1>Liste des candidats</h1>
+<div *ngIf="loading">Chargement des candidats...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+
+<table class="table" *ngIf="!loading && !error">
+  <thead>
+  <tr>
+    <th scope="col">Prenom</th>
+    <th scope="col">nom</th>
+    <th scope="col">Parti</th>
+    <th scope="col">Biographie</th>
+    <th scope="col">programme</th>
+    <th scope="col">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let candidat of candidats">
+    <td>{{ candidat.prenom }}</td>
+    <td>{{ candidat.nom }}</td>
+    <td>{{ candidat.parti }}</td>
+    <td>{{ candidat.biographie }}</td>
+    <td>{{ candidat.programme }}</td>
+    <td colspan="2">
+      <button>Modifier</button>
+      <button (click)="deleteCandidat(candidat.idUtilisateur)" class="btn btn-danger">Supprimer</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+

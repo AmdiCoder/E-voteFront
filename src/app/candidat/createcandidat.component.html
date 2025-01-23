@@ -1,0 +1,155 @@
+<div class="container">
+  <h2>Ajouter un candidat</h2>
+  <form (ngSubmit)="onSubmit()" #candidatForm="ngForm">
+    <div class="mb-3">
+      <label for="prenom" class="form-label">Prénom</label>
+      <input
+        type="text"
+        id="prenom"
+        class="form-control"
+        [(ngModel)]="candidat.prenom"
+        name="prenom"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="nom" class="form-label">Nom</label>
+      <input
+        type="text"
+        id="nom"
+        class="form-control"
+        [(ngModel)]="candidat.nom"
+        name="nom"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="dateNaissance" class="form-label">Date de Naissance</label>
+      <input
+        type="date"
+        id="dateNaissance"
+        class="form-control"
+        [(ngModel)]="candidat.dateNaissance"
+        name="dateNaissance"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="sexe" class="form-label">Sexe</label>
+      <select
+        id="sexe"
+        class="form-control"
+        [(ngModel)]="candidat.sexe"
+        name="sexe"
+        required
+      >
+        <option value="" disabled selected>Choisir...</option>
+        <option value="M">Masculin</option>
+        <option value="F">Féminin</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="numeroCarte" class="form-label">Numéro de Carte</label>
+      <input
+        type="text"
+        id="numeroCarte"
+        class="form-control"
+        [(ngModel)]="candidat.numeroCarte"
+        name="numeroCarte"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="telephone" class="form-label">Téléphone</label>
+      <input
+        type="tel"
+        id="telephone"
+        class="form-control"
+        [(ngModel)]="candidat.telephone"
+        name="telephone"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="parti" class="form-label">Parti Politique</label>
+      <input
+        type="text"
+        id="parti"
+        class="form-control"
+        [(ngModel)]="candidat.parti"
+        name="parti"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="programme" class="form-label">Programme</label>
+      <textarea
+        id="programme"
+        class="form-control"
+        [(ngModel)]="candidat.programme"
+        name="programme"
+        rows="3"
+        required
+      ></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="biographie" class="form-label">Biographie</label>
+      <textarea
+        id="biographie"
+        class="form-control"
+        [(ngModel)]="candidat.biographie"
+        name="biographie"
+        rows="3"
+        required
+      ></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="username" class="form-label">Nom d'Utilisateur</label>
+      <input
+        type="text"
+        id="username"
+        class="form-control"
+        [(ngModel)]="candidat.username"
+        name="username"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        [(ngModel)]="candidat.email"
+        name="email"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="motDePasse" class="form-label">Mot de Passe</label>
+      <input
+        type="password"
+        id="motDePasse"
+        class="form-control"
+        [(ngModel)]="candidat.motDePasse"
+        name="motDePasse"
+        required
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="candidatForm.invalid">
+      Ajouter le candidat
+    </button>
+  </form>
+</div>
